@@ -67,9 +67,11 @@ boot(void)
 	kprintf("\n");
 
 	kprintf("Put-your-group-name-here's system version %s (%s #%d)\n", 
-		GROUP_VERSION, buildconfig, buildversion);
+		GROUP_VERSION, buildconfig, buildversion); //Rajesh Patel
 	kprintf("\n");
-
+        
+        hello();
+        
 	ram_bootstrap();
 	scheduler_bootstrap();
 	thread_bootstrap();
