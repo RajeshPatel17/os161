@@ -70,7 +70,20 @@ boot(void)
 		GROUP_VERSION, buildconfig, buildversion); //Rajesh Patel
 	kprintf("\n");
         
-        hello();
+    hello();
+
+	DEBUG(DB_VM, "DEBUG_VM message\n");
+	DEBUG(DB_LOCORE, "DEBUG_LOCORE message\n");
+	DEBUG(DB_SYSCALL, "DEBUG_SYSCALL message\n");
+	DEBUG(DB_INTERRUPT, "DEBUG_INTERRUPT message\n");
+	DEBUG(DB_DEVICE, "DEBUG_DEVICE message\n");
+	DEBUG(DB_THREADS, "DEBUG_THREADS message\n");
+	DEBUG(DB_EXEC, "DEBUG_EXEC message\n");
+	DEBUG(DB_VFS, "DEBUG_VFS message\n");
+	DEBUG(DB_SFS, "DEBUG_SFS message\n");
+	DEBUG(DB_NET, "DEBUG_NET message\n");
+	DEBUG(DB_NETFS, "DEBUG_NETFS message\n");
+	DEBUG(DB_KMALLOC, "DEBUG_KMALLOC message\n");
         
 	ram_bootstrap();
 	scheduler_bootstrap();
